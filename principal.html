@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pseudo-selectores</title>
+	<script src="jquery-2.0.2.js"></script>
+	<script>
+		$(document).ready(function(){
+			function mostrar(){
+				console.log("Estas sobre un pseudo-selector");
+			}
+
+			$("p:contains(click)").on("mouseover", mostrar);
+		});
+	</script>
+	<style>
+		p{
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: red;
+			width: 100px;
+			height: 20px; 
+		}
+	</style>
+</head>
+<body>
+	<p></p>
+	<p>click</p>
+	<p></p>
+	<p></p>
+	<p></p>
+</html>

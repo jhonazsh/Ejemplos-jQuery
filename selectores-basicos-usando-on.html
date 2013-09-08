@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selectores Básicos - on</title>
+	<script src="jquery-2.0.2.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			//Usamos on() para poder mandarle una funcion la cual reducira todo nuestro codigo
+			// y de alguna manera hará mas modular, esto se hace para reutilizar funciones
+			// es lo mas recomendable y hace lo mismo que el ejemplo clasico
+
+			$(".clasesita").on("mouseover", mostrar);
+			$("#idesito").on("mouseover", mostrar);
+			$("p").on("mouseover", mostrar);
+
+			function mostrar() {
+				console.log("Estas seleccionando un SELECTOR BÁSICO");
+			}
+		})
+	</script>
+	<style>
+		body{
+			font-family: Calibri;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.clasesita, #idesito, p{
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100px;
+			height: 20px;
+			border-radius: 3px;
+		}
+
+		.clasesita{
+			background-color: red;
+		}
+
+		#idesito{
+			background-color: yellow;
+		}
+
+		p{
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>Selectores Básicos usando .on()</h1>
+	<h2>by @jhonazsh / DevCode.la</h2>
+
+	<div class="clasesita"></div>
+	<div id="idesito"></div>
+	<p></p>
+</body>
+</html>

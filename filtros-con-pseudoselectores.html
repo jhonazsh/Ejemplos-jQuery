@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pseudo-selectores</title>
+	<script src="jquery-2.0.2.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			function mostrar() {
+				console.log("Estas sobre un pseudo-selector");
+			}
+
+			//Descomenta cada linea de codigo para poder efectuar cada pseudoselector y pueda funcionar
+			//solo descomenta cada uno a la vez para poder ver el ejemplo con mayor precision
+
+			//$("p:first").on("mouseover", mostrar);
+			//$("p:last").on("mouseover", mostrar);
+			//$("p:not(.clasesita)").on("mouseover", mostrar);
+			//$("p:has(a)").on("mouseover", mostrar);
+			//$("p:contains(click)").on("mouseover", mostrar);
+			
+		})
+	</script>
+	<style>
+		body{
+			font-family: Calibri;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		p{
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100px;
+			height: 20px;
+			border-radius: 3px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Filtros con Pseudo-selectores</h1>
+	<h2>by @jhonazsh / DevCode.la</h2>
+
+	<!--Esta primera etiqueta funciona con pseudoselector :first-->
+	<p></p>
+
+	<!--Esta segunda etiqueta funciona con pseudoselector :has(a)-->
+	<p>
+		<a href=""></a>
+	</p>
+
+	<!--Esta tercera etiqueta funciona con pseudoselector :not(.clasesita)-->
+	<p class="clasesita"></p>
+
+	<!--Esta cuarta etiqueta funciona con pseudoselector :has(a)-->
+	<p>
+		<a href=""></a>
+	</p>
+
+	<!--Esta quinta etiqueta funciona con pseudoselector :contains(click)-->
+	<p>click</p>
+
+	<!--Esta ultima etiqueta funciona con pseudoselector :last-->
+	<p></p>
+
+</body>
+</html>

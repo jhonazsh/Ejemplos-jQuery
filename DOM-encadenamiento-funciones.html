@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM | Encadenamiento de funciones</title>
+	<script src="jquery-2.0.2.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			//Descomentar cada linea de codigo para ver el funcionamiento de cada una
+			//solo descomentar una por vez
+
+			//$("#destino").find("li").on("mouseover",mostrar);
+			//$("li").first().on("mouseover",mostrar);
+			//$("li").last().on("mouseover",mostrar);
+			//$("li").first().next().on("mouseover",mostrar);
+			//$("li").first().next().prev().on("mouseover",mostrar);
+			//$("li").first().parent().on("mouseover",mostrar);
+			//$("#destino").children().on("mouseover",mostrar);
+
+			function mostrar(){
+				console.log("Seleccionado...!")
+			}
+		});
+	</script>
+	<style>
+		body{
+				font-family: Calibri;
+				font-weight: bold;
+				text-align: center;
+			}
+
+		#destino{
+			margin-left: auto;
+			margin-right: auto;
+			background-color: yellow;
+			width: 200px;
+			padding: 3px;
+			box-shadow: 2px 2px 2px #000;
+			border:1px solid black;
+		}
+
+		#destino li{
+			border-radius: 3px;
+			padding: 10px;
+			background-color: rgb(116, 94, 94);
+			margin: 3px;
+			list-style-type: none;
+			color:white;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>DOM | Encadenamiento de Funciones</h1>
+	<h2>by @jhonazsh / DevCode.la</h2>
+
+	<ul id="destino">
+		<li>lista 1</li>
+		<li>lista 2</li>
+		<li>lista 3</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selectores Avanzados</title>
+	<script src="jquery-2.0.2.js"></script>
+	<script>
+		$(document).ready(function(){
+			//Selector Descendente
+			$(".clasesita div").mouseover(function(){
+				console.log("Estas seleccionando un SELECTOR AVANZADO");
+			});
+
+			//Selector Secundario
+			$("div > h2").mouseover(function(){
+				console.log("Estas seleccionando un SELECTOR AVANZADO");
+			});
+
+			//Selector Adyacente
+			$("h3 + h4").mouseover(function(){
+				console.log("Estas seleccionando un SELECTOR AVANZADO");
+			});
+
+		})
+	</script>
+	<style>
+		body{
+			font-family: Calibri;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.clasesita{
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100px;
+			height: 20px;
+			border-radius: 3px;
+			background-color: red;
+		}
+
+		.clasesita div{
+			width: 10px;
+			height: 10px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>Selectores Avanzados</h1>
+	<h2>by @jhonazsh / DevCode.la</h2>
+
+	<!-- Para el uso del Selector Descendente -->
+	<div class="clasesita">
+		<div></div>
+	</div>
+
+	<!-- Para el uso del Selector Secundario -->
+	<div>
+		<h1>Hola</h1>
+		<h2>Hola 2</h2>
+	</div>
+
+	<!-- Para el uso del Selector Adyacente-->
+	<h3>Hola 3</h3>
+	<h4>Hola 4</h4>
+</body>
+</html>
